@@ -1,16 +1,7 @@
-function pegaPesoAltura( labelPesoOuAltura ){
-    var valorInformado = prompt( labelPesoOuAltura );
-    if(valorInformado != null){
-        return parseFloat( valorInformado.replace(',', '.') );
-    }else{
-        alert( "O valor não pode ser vazio." );
-    }
-}
-
 
 function calculaImc(){
-    var peso = pegaPesoAltura( "Informe seu peso" );
-    var altura = pegaPesoAltura("Informe sua altura" );
+    var peso = pegaValor( "Informe seu peso" );
+    var altura = pegaValor("Informe sua altura" );
 
     var imc = peso / (altura * altura);
     imc = imc.toFixed(2);
