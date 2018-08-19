@@ -1,15 +1,23 @@
 var lista = [];
 var valor = "";
 while(valor != null){
-    valor = prompt();
+    valor = prompt("criar a lista de nomes");
     if(valor != null){
-        lista.push( parseFloat(valor));
+        lista.push( valor.trim() );
     }
 
 }
-var soma = 0;
+// ["guilherme", "henrique", "martins", "da", "cruz"]
+var nomePes = prompt("nome a ser procurado").trim();
+var temNome = false;
 for(var i = 0; i < lista.length; i++){
-    soma = soma + lista[i];
+    if( lista[i] == nomePes){
+        temNome = true;
+    }
 }
 
-document.write(soma / lista.length)
+if( temNome ){
+    alert("Nome encontrado na posicao: " );
+}else{
+    alert("Nome não encontrado");
+}
